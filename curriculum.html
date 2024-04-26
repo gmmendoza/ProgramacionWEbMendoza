@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Curriculum Vitae</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #cabecera {
+      margin-top: 20px;
+    }
+
+    #cabecera img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    #datos-personales {
+      width: 70%;
+    }
+
+    #contenido {
+      width: 70%;
+      display: flex; /* Utiliza flexbox para colocar los elementos en línea */
+      justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    }
+    #contenido2 {
+      width: 70%;
+      display: flex; /* Utiliza flexbox para colocar los elementos en línea */
+      justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    }
+    #contenido > div {
+      width: 48%; /* Ancho de cada columna */
+    }
+    #contenido2 > div {
+      width: 48%; /* Ancho de cada columna */
+    }
+
+    #objetivo h2,
+    #estudios-realizados h2,
+    #antecedentes-laborales h2,
+    #pasatiempos h2 {
+      margin-bottom: 5px; /* Espacio entre el título y el contenido */
+    }
+  </style>
+</head>
+<body>
+  <div id="cabecera">
+    <img src="IMG_20220525_221621_841.jpg" alt="Foto del candidato">
+  </div>
+
+  <div id="datos-personales">
+    <h2>Datos personales</h2>
+    <p>Nombre: Guadalupe Mendoza</p>
+    <p>Dirección: Calle Juan domingo Peron, 51</p>
+    <p>Teléfono: +3764895145</p>
+    <p>Correo electrónico: guuadamendoza@gmail.com</p>
+  </div>
+
+  <div id="contenido">
+    <div id="objetivo">
+      <h2>Objetivo</h2>
+      <p>Obtener un puesto de trabajo en el área de desarrollo web donde pueda poner en práctica mis conocimientos y habilidades.</p>
+    </div>
+    <div id="estudios-realizados">
+      <h2>Estudios realizados</h2>
+      <ul>
+        <li>Licenciatura en Sistemas en informacion (Actualmente)</li>
+        <li>Bachiller Tecnico: Tecnico Personal y Profesional en Informatica </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="contenido2">
+    <div id="antecedentes-laborales">
+      <h2>Antecedentes laborales</h2>
+      <ul>
+        <li>ElectroMisiones (2017)</li>
+      </ul>
+    </div>
+    <div id="pasatiempos">
+      <h2>Pasatiempos</h2>
+      <ul>
+        <li>Realizo deportes</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
+
