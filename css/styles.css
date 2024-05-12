@@ -1,0 +1,300 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #070707;
+    color: #007bff; 
+    line-height: 1.6;
+    text-align: center; 
+}
+
+/* Encabezado */
+header {
+    background-color: #041292;
+    color: #fefeff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/*Primera parte Historia1*/
+.Historia1 h2 {
+    text-align: center; 
+    font-size: 24px; 
+    color: #f2f399;
+}
+
+.Historia1 p {
+    font-size: 18px; 
+    line-height: 1.8;
+}
+
+/* Imágenes */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.gallery-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Línea Divisoria */
+.divider {
+    border: none;
+    border-top: 10px solid #1c03ff; 
+    margin: 20px 0; 
+}
+
+/* Mejorar Texto */
+.text-styling {
+    text-align: center;
+}
+
+.text-styling h2 {
+    font-size: 24px; 
+    font-weight: bold; 
+    text-decoration: underline;
+}
+
+.text-styling p {
+    font-family: "Times New Roman", Times, serif; 
+    font-size: 19px; 
+    font-weight: normal; 
+    color: #007bff; 
+    text-align: justify; 
+}
+
+/* Diseño de cajas */
+.boxes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.box {
+    width: 500px; 
+    height: 350px;
+    background-color: #041292;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.box h3 {
+    text-align: center;
+    margin-top: 5px;
+    color: #fff; 
+}
+
+.box button, .box button a {
+    display: block;
+    margin: 5px auto; 
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none; 
+    width: auto; 
+}
+
+.box button {
+    width: auto; 
+}
+
+.box button:hover, .box button a:hover {
+    background-color: #218838;
+}
+
+.buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.buttons button, .buttons a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.buttons button:hover, .buttons a:hover {
+    background-color: #28a745;
+}
+
+/*Enlaces */
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color:#28a745;
+    margin-right: 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/*Menús de navegación */
+.navigation-menu {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navigation-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation-menu ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.navigation-menu ul li a {
+    text-decoration: none;
+    color: #f3efef;
+}
+
+.navigation-menu ul li a:hover {
+    text-decoration: underline;
+}
+/*  formularios  */
+.styled-form {
+    width: 80%; 
+    margin: 0 auto; 
+    max-width: 500px; 
+    background-color: #041292; 
+    padding: 20px; 
+    border-radius: 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+.styled-form label {
+    display: block; 
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.styled-form input[type="text"],
+.styled-form input[type="email"],
+.styled-form textarea {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 10px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #f2f2f2;
+}
+
+.styled-form textarea {
+    height: 100px; 
+}
+
+.styled-form button {
+    width: 100%; 
+    padding: 10px; 
+    background-color: #8c28a7; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer; 
+}
+
+.styled-form button:hover {
+    background-color: #218838; 
+}
+
+/* Efectos Hover */
+.hover-effects {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.hover-effect {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.hover-effect:hover {
+    background-color: #0056b3;
+}
+
+
+.advanced-selectors {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.parent {
+    background-color: #041292;
+    padding: 20px;
+}
+
+.child {
+    background-color: #28a745;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.child {
+    color: #fff;
+    text-align: center; 
+    font-size: 24px; 
+}
+
+
+
+/* Botones dentro de las cajas */
+.box button,
+.box button a {
+    background-color: #00ff2a; 
+    color: #fff; 
+    display: block;
+    margin: 5px auto; 
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px; 
+}
+
+
+.styled-form input[type="text"],
+.styled-form input[type="email"],
+.styled-form textarea {
+    color: #000;
+    font-size: 16px;
+}
+
