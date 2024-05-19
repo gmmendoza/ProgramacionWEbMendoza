@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000000; 
+        }
+        h1 {
+            color: #1bfd06; 
+            font-size: 2em; 
+            margin-bottom: 20px; 
+        }
+        #galeria {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 80%; 
+            max-width: 600px; 
+            height: 400px; 
+            overflow: hidden;
+            background-color: #f0f0f0; 
+            border: 2px solid #ccc;
+            border-radius: 10px; 
+        }
+        #galeria img {
+            display: none;
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+        #galeria img.active {
+            display: block;
+            margin: auto;
+        }
+        .nav-button {
+            padding: 10px 20px;
+            margin: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #28a745; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #218838; 
+        }
+        .nav-button:focus {
+            outline: none; 
+        }
+        .nav-button:active {
+            background-color: #9400D3; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Galería de Imágenes</h1>
+    <div id="galeria">
+        <img src="Javascript/foto1.jpg" alt="Imagen 1" class="active">
+        <img src="Javascript/foto2.jpg" alt="Imagen 2">
+        <img src="Javascript/foto3.jpg" alt="Imagen 3">
+        <img src="Javascript/foto4.jpg" alt="Imagen 4">
+        <img src="Javascript/foto5.jpg" alt="Imagen 5">
+        <img src="Javascript/foto6.jpg" alt="Imagen 6">
+        <img src="Javascript/foto7.jpg" alt="Imagen 7">
+        <img src="Javascript/foto8.jpg" alt="Imagen 8">
+        <img src="Javascript/foto9.jpg" alt="Imagen 9">
+    </div>
+    <div>
+        <button id="anterior" class="nav-button">Anterior</button>
+        <button id="siguiente" class="nav-button">Siguiente</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const imagen = document.querySelectorAll('#galeria img');
+            let currentIndex = 0;
+
+            document.getElementById('siguiente').addEventListener('click', () => {
+                imagen[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % imagen.length;
+                imagen[currentIndex].classList.add('active');
+            });
+
+            document.getElementById('anterior').addEventListener('click', () => {
+                imagen[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex - 1 + imagen.length) % imagen.length;
+                imagen[currentIndex].classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Formulario de Registro</h2>
+        <form id="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre">
+            <span id="error1" class="error"></span><br>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email">
+            <span id="error2" class="error"></span><br>
+
+            <label for="pass">Contraseña:</label>
+            <input type="password" id="pass" name="pass">
+            <span id="error3" class="error"></span><br>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('formulario').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var nombre = document.getElementById('nombre').value;
+            var email = document.getElementById('email').value;
+            var pass = document.getElementById('pass').value;
+
+            var errorn = document.getElementById('error1');
+            var errore = document.getElementById('error2');
+            var errorp = document.getElementById('error3');
+
+            var validar = true;
+
+            
+            errorn.textContent = '';
+            errore.textContent = '';
+            errorp.textContent = '';
+
+           
+            if (nombre === '') {
+                errorn.textContent = 'Falta ingresar su nombre.';
+                validar = false;
+            }
+
+           
+            if (email === '') {
+                errore.textContent = 'Ingrese un correo electrónico válido.';
+                validar = false;
+            }
+
+           
+            if (pass === '') {
+                errorp.textContent = 'Ingrese una contraseña válida.';
+                validar = false;
+            }
+
+            // Alertar
+            if (!validar) {
+                alert('Faltan completar datos.');
+            } else {
+                alert('Su formulario fue enviado');
+            }
+        });
+    </script>
+</body>
+</html>
+

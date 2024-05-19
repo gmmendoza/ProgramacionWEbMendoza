@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reloj Digital</title>
+<style>
+    body {
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    #contenedor {
+        text-align: center;
+    }
+
+    #reloj {
+        font-family: 'Roboto', sans-serif;
+        font-size: 64px;
+        color: #333;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+        color: #007bff; /* Azul */
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+<div id="contenedor">
+    <h1 id="saludo">Su hora actual es </h1>
+    <div id="reloj"></div>
+</div>
+
+<script>
+    function actualizar() {
+        var ahora = new Date();
+        var horas = ahora.getHours();
+        var minutos = ahora.getMinutes();
+        var segundos = ahora.getSeconds();
+        
+        minutos = minutos < 10 ? '0' + minutos : minutos;
+        segundos = segundos < 10 ? '0' + segundos : segundos;
+        
+        var saludo = "";
+        if (horas >= 6 && horas < 12) {
+            saludo = "Buenos días";
+        } else if (horas >= 12 && horas < 18) {
+            saludo = "Buenas tardes";
+        } else {
+            saludo = "Buenas noches";
+        }
+        
+        var horaactual = horas + ':' + minutos + ':' + segundos;
+        document.getElementById('reloj').innerText = horaactual;
+        document.getElementById('saludo').innerText = saludo + ", su hora actual es";
+    }
+
+    setInterval(actualizar, 1000);
+    actualizarReloj();
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estilos</title>
+    <style>
+         body {
+            margin: 0;
+            background-color: #f4f4f4;
+            color: rgb(12, 14, 6);
+            text-align: center;
+        }
+        h1 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        p {
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .clickeado {
+            background-color: yellow;
+            font-size: 18px;
+        }
+
+        .efecto1 {
+            font-style: italic;
+        }
+
+        .efecto2 {
+            text-decoration: underline;
+        }
+
+        .efecto3 {
+            color: blue;
+        }
+
+        .efecto4 {
+            font-weight: bold;
+        }
+
+        .efecto5 {
+            background-color: pink;
+        }
+
+        .container-canciones {
+            text-align: center;
+        }
+
+        .boton {
+            margin: 10px;
+            padding: 10px 20px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+
+        .color-1 {
+            background-color: #007bff;
+        }
+
+        .color-2 {
+            background-color: #28a745;
+        }
+
+        .color-3 {
+            background-color: #dc3545;
+        }
+
+        .color-4 {
+            background-color: #ffc107;
+        }
+
+        .color-5 {
+            background-color: #17a2b8;
+        }
+
+        .color-6 {
+            background-color: #6610f2;
+        }
+
+        .color-7 {
+            background-color: #6c757d;
+        }
+
+        .boton:active,
+        .boton:focus {
+            transform: translateY(1px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Distintas Letras </h1>
+
+
+    <p id="primerParrafo" onclick="EstiloParrafo(this, 1)" class="efecto1">
+        I got chills, they're multiplyin'
+        <br>
+        And I'm losin' control
+        <br>
+        Cause the power you're supplyin'
+        <br>
+        It's electrifyin'
+        <br>
+        You better shape up, cause I need a man
+        <br>
+        And my heart is set on you
+        <br>
+        You better shape up, you better understand
+        <br>
+        To my heart I must be true
+    </p>
+    <hr>
+    <p onclick="EstiloParrafo(this, 2)" class="efecto2">
+        Let's dance in style, let's dance for a while
+        <br>
+        Heaven can wait, we're only watching the skies
+        <br>
+        Hoping for the best, but expecting the worst
+        <br>
+        Are you gonna drop the bomb or not?
+        <br>
+        Let us die young or let us live forever
+        <br>
+        We don't have the power, but we never say never
+        <br>
+        Sitting in a sandpit, life is a short trip
+        <br>
+        The music's for the sad men
+        <br>
+        Can you imagine when this race is won?
+        <br>
+        Turn our golden faces into the Sun
+        <br>
+        Praising our leaders, we're getting in tune
+        <br>
+        The music's played by the, the mad men
+        <br>
+        Forever young, I want to be forever young
+
+    </p>
+    <hr>
+    <p onclick="EstiloParrafo(this, 3)" class="efecto3">talking away
+        i don't know what i'm to say
+        i'll say it anyway
+        today is another day to find you
+        shying away
+        i'll be coming for your love. ok?
+
+        take on me (take on me)
+        take me on (take on me)
+
+        i'll be gone
+        in a day or two
+        so needless to say
+        of odds and ends
+        but i'll be stumbling away
+        slowly learning that life is ok.
+        say after me,
+        "it's no better to be safe than sorry."</p>
+    <hr>
+    <p onclick="EstiloParrafo(this, 4)" class="efecto4">
+        Tonight, I'm gonna have myself a real good time
+        I feel alive
+        And the world, I'll turn it inside out, yeah!
+        I'm floating around in ecstasy
+        So don't stop me now
+        Don't stop me
+
+        'Cause I'm having a good time, having a good time
+        I'm a shooting star leaping through the sky
+        Like a tiger defying the laws of gravity
+        I'm a racing car passing by, like Lady Godiva
+        I'm gonna go, go, go
+        There's no stopping me
+        I'm burning through the sky, yeah!
+        Two hundred degrees
+        That's why they call me Mister Fahrenheit
+        I'm travelling at the speed of light
+        I wanna make a supersonic man out of you</p>
+    <hr>
+    <p onclick="EstiloParrafo(this, 5)" class="efecto5">
+        And now, the end is near
+        And so I face the final curtain
+        My friend, I'll say it clear
+        I'll state my case, of which I'm certain
+
+        I've lived a life that's full
+        I travelled each and every highway
+        And more, much more than this
+        I did it my way
+
+        Regrets, I've had a few
+        But then again, too few to mention
+        I did what I had to do
+        And saw it through without exemption</p>
+
+    <div class="container-canciones">
+        <h2> Lista de Temas </h2>
+
+        <button class="boton color-1"
+            onclick="playVideo('https://www.youtube.com/watch?v=Ov2AI20-ANQ&ab_channel=BrokenDreams')">Enlace 1</button>
+        <button class="boton color-2"
+            onclick="playVideo('https://www.youtube.com/watch?v=DnCx48Uzid4&ab_channel=Peace%26RockRadio')">Enlace
+            2</button>
+        <button class="boton color-3"
+            onclick="playVideo('https://www.youtube.com/watch?v=Lu6afeIQe5w&ab_channel=sweetblue.')">Enlace 3</button>
+        <button class="boton color-4"
+            onclick="playVideo('https://www.youtube.com/watch?v=btX0F7EMNjY&ab_channel=LuuliG')">Enlace 4</button>
+        <button class="boton color-5"
+            onclick="playVideo('https://www.youtube.com/watch?v=74vIWAR-fHY&ab_channel=MichaelLyrics')">Enlace
+            5</button>
+        <button class="boton color-6"
+            onclick="playVideo('https://www.youtube.com/watch?v=rsU7xQNORsw&ab_channel=MaggotManson1')">Enlace
+            6</button>
+        <button class="boton color-7"
+            onclick="playVideo('https://www.youtube.com/watch?v=Gcxv7i02lXc&ab_channel=0000MATINA')">Enlace 7</button>
+    </div>
+    <script>
+        function EstiloParrafo(parrafo, num) {
+            var parrafos = document.querySelectorAll('p');
+
+
+            parrafos.forEach(function (p) {
+                p.classList.remove('clickeado');
+                p.style.backgroundColor = '';
+                p.style.fontSize = '';
+                p.style.textDecoration = '';
+            });
+
+
+            parrafo.classList.toggle('clickeado');
+            parrafo.style.backgroundColor = 'lavender';
+            parrafo.style.textDecoration = 'none';
+            if (num === 2) {
+                parrafo.style.backgroundColor = 'yellow';
+                parrafo.style.fontSize = '24px';
+            } else if (num === 3) {
+                parrafo.style.backgroundColor = 'lightblue';
+                parrafo.style.fontSize = '20px';
+            }
+        }
+        function playVideo(url) {
+
+            console.log("Reproducir video: " + url);
+            window.open(url, '_blank');
+
+            var buttons = document.getElementsByClassName("boton");
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].classList.remove("selected");
+            }
+            this.classList.add("selected");
+        }
+    </script>
+
+</body>
+
+</html>
