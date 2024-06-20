@@ -72,7 +72,7 @@
 
         if (validar($num)) {
 
-            echo "<h4>Tabla de multiplicar numero $num </h4>";
+            echo "<h4>Tabla de multiplicar $num </h4>";
             echo "<table>";
             echo "<tr><th></th><th>Resultado</th></tr>";
             $j = 1;

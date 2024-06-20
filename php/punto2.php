@@ -68,8 +68,8 @@
             if ($num < 2) {
                 return false;
             }
-            for ($i = 2; $i <= sqrt($num); $i++) {
-                if ($num % $i == 0) {
+            for ($j = 2; $j <= sqrt($num); $j++) {
+                if ($num % $j == 0) {
                     return false;
                 }
             }
@@ -92,10 +92,10 @@
 
             echo "Los primeros 16 números primos desde $num son:<br>";
             echo "<table>";
-            for ($i = 0; $i < 4; $i++) {
+            for ($j = 0; $j < 4; $j++) {
                 echo "<tr>";
-                for ($j = 0; $j < 4; $j++) {
-                    echo "<td>" . $primos[$i + $j * 4] . "</td>";
+                for ($l = 0; $l < 4; $l++) {
+                    echo "<td>" . $primos[$j + $l * 4] . "</td>";
                 }
                 echo "</tr>";
             }
